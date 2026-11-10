@@ -41,6 +41,19 @@ Over several months I've developed an extensive set of house rules, including mo
 - `api/` — backend (FastAPI)
 - `web/` — frontend (Angular)
 
+## How to run the API
+You need Python 3.13+. From `api/`:
+
+```bash
+python -m venv .venv
+.venv\Scripts\activate         # Windows; on macOS/Linux: source .venv/bin/activate
+pip install -r requirements.txt
+alembic upgrade head           # create or update the database tables
+fastapi dev app/main.py        # API on http://localhost:8000, docs at /docs
+```
+
+Run `alembic upgrade head` again after pulling changes that add migrations; the API doesn't create tables on startup. The database is `api/dnd.db` by default. Set the `DATABASE_URL` environment variable to use a different one.
+
 ## How to run the web app
 You need Node.js 22.22+ or 24.15+ (check with `node -v`).
 

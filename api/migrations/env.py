@@ -20,8 +20,12 @@ if config.config_file_name is not None:
 # target_metadata = mymodel.Base.metadata
 from sqlmodel import SQLModel
 import app.models  # noqa: F401  (loads your table classes)
+from app.database import DATABASE_URL
 
 target_metadata = SQLModel.metadata
+
+# Use the app's database URL ('%' escaped for Alembic's config parser)
+config.set_main_option("sqlalchemy.url", DATABASE_URL.replace("%", "%%"))
 
 # other values from the config, defined by the needs of env.py,
 # can be acquired:
