@@ -2,3 +2,9 @@
 *.db
 __pycache__/
 *.pyc
+# Node / Angular (web/)
+node_modules/
+dist/
+.angular/
+coverage/
+npm-debug.log*

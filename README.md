@@ -41,6 +41,26 @@ Over several months I've developed an extensive set of house rules, including mo
 - `api/` — backend (FastAPI)
 - `web/` — frontend (Angular)
 
+## How to run the web app
+You need Node.js 22.22+ or 24.15+ (check with `node -v`).
+
+```bash
+cd web
+npm install      # first time, and after package.json changes
+npm start        # dev server on http://localhost:4200
+```
+
+The dev server forwards any request to `/api/...` to the FastAPI backend at `http://localhost:8000` (the `/api` prefix is stripped, so `/api/health` hits `/health`). Start the API first if you need it; see `web/proxy.conf.json`.
+
+Other commands, from `web/`:
+- `npm test` runs the unit tests (Vitest)
+- `npm run build` makes a production build in `web/dist/`
+- `npm run ng -- <args>` runs any other Angular CLI command, e.g. `npm run ng -- generate component foo`
+
+The scripts call `node node_modules/@angular/cli/bin/ng.js` directly instead of `ng`, because the Windows `ng.cmd` shim breaks on the `&` in this repo's folder path.
+
+For now the app only has a username-only login page and an empty home page. The username is kept in the browser (localStorage) and isn't sent to the API yet.
+
 ## Content
 Uses only SRD 5.1/5.2 rules content (Creative Commons) plus our own homebrew and campaign material. Campaign data is stored in the app's database, not in this repository.
 
