@@ -13,6 +13,7 @@ class ItemBase(SQLModel):               # fields shared by everything
     name: str = Field(index=True)
     price_gp: int = Field(ge=0)
     rarity: Rarity = Rarity.common
+    description: str | None = None
 
 class Item(ItemBase, table=True):       # table=True makes it a database table
     id: int | None = Field(default=None, primary_key=True)  # the DB assigns it
