@@ -1,6 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 import { provideRouter, Router } from '@angular/router';
 import { Home } from './home';
+import { KnownAccountsService } from '../known-accounts.service';
 import { UserService } from '../user.service';
 
 describe('Home', () => {
@@ -23,5 +24,17 @@ describe('Home', () => {
     (fixture.nativeElement as HTMLElement).querySelector('a')!.click();
     expect(TestBed.inject(UserService).username()).toBeNull();
     expect(navigate).toHaveBeenCalledWith('/login');
+  });
+
+  it('keeps the account remembered after logout', async () => {
+    vi.spyOn(TestBed.inject(Router), 'navigateByUrl').mockResolvedValue(true);
+    const fixture = TestBed.createComponent(Home);
+    await fixture.whenStable();
+    (fixture.nativeElement as HTMLElement).querySelector('a')!.click();
+
+    expect(localStorage.getItem('username')).toBeNull();
+    expect(TestBed.inject(KnownAccountsService).accounts()).toEqual([
+      { id: 'Gimli', displayName: 'Gimli', kind: 'character' },
+    ]);
   });
 });
