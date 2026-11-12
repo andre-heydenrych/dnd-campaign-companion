@@ -1,0 +1,67 @@
+[
+  {
+    "id": "padded",
+    "name": "Padded",
+    "cost_gp": 5
+  },
+  {
+    "id": "leather",
+    "name": "Leather",
+    "cost_gp": 10
+  },
+  {
+    "id": "studded-leather",
+    "name": "Studded leather",
+    "cost_gp": 45
+  },
+  {
+    "id": "hide",
+    "name": "Hide",
+    "cost_gp": 10
+  },
+  {
+    "id": "chain-shirt",
+    "name": "Chain shirt",
+    "cost_gp": 50
+  },
+  {
+    "id": "scale-mail",
+    "name": "Scale mail",
+    "cost_gp": 50
+  },
+  {
+    "id": "breastplate",
+    "name": "Breastplate",
+    "cost_gp": 400
+  },
+  {
+    "id": "half-plate",
+    "name": "Half plate",
+    "cost_gp": 750
+  },
+  {
+    "id": "ring-mail",
+    "name": "Ring mail",
+    "cost_gp": 30
+  },
+  {
+    "id": "chain-mail",
+    "name": "Chain mail",
+    "cost_gp": 75
+  },
+  {
+    "id": "splint",
+    "name": "Splint",
+    "cost_gp": 200
+  },
+  {
+    "id": "plate",
+    "name": "Plate",
+    "cost_gp": 1500
+  },
+  {
+    "id": "shield",
+    "name": "Shield",
+    "cost_gp": 10
+  }
+]

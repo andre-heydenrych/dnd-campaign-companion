@@ -1,0 +1,187 @@
+[
+  {
+    "id": "club",
+    "name": "Club",
+    "cost_gp": 0.1
+  },
+  {
+    "id": "dagger",
+    "name": "Dagger",
+    "cost_gp": 2
+  },
+  {
+    "id": "greatclub",
+    "name": "Greatclub",
+    "cost_gp": 0.2
+  },
+  {
+    "id": "handaxe",
+    "name": "Handaxe",
+    "cost_gp": 5
+  },
+  {
+    "id": "javelin",
+    "name": "Javelin",
+    "cost_gp": 0.5
+  },
+  {
+    "id": "light-hammer",
+    "name": "Light hammer",
+    "cost_gp": 2
+  },
+  {
+    "id": "mace",
+    "name": "Mace",
+    "cost_gp": 5
+  },
+  {
+    "id": "quarterstaff",
+    "name": "Quarterstaff",
+    "cost_gp": 0.2
+  },
+  {
+    "id": "sickle",
+    "name": "Sickle",
+    "cost_gp": 1
+  },
+  {
+    "id": "spear",
+    "name": "Spear",
+    "cost_gp": 1
+  },
+  {
+    "id": "light-crossbow",
+    "name": "Light crossbow",
+    "cost_gp": 25
+  },
+  {
+    "id": "dart",
+    "name": "Dart",
+    "cost_gp": 0.05
+  },
+  {
+    "id": "shortbow",
+    "name": "Shortbow",
+    "cost_gp": 25
+  },
+  {
+    "id": "sling",
+    "name": "Sling",
+    "cost_gp": 0.1
+  },
+  {
+    "id": "battleaxe",
+    "name": "Battleaxe",
+    "cost_gp": 10
+  },
+  {
+    "id": "flail",
+    "name": "Flail",
+    "cost_gp": 10
+  },
+  {
+    "id": "glaive",
+    "name": "Glaive",
+    "cost_gp": 20
+  },
+  {
+    "id": "greataxe",
+    "name": "Greataxe",
+    "cost_gp": 30
+  },
+  {
+    "id": "greatsword",
+    "name": "Greatsword",
+    "cost_gp": 50
+  },
+  {
+    "id": "halberd",
+    "name": "Halberd",
+    "cost_gp": 20
+  },
+  {
+    "id": "lance",
+    "name": "Lance",
+    "cost_gp": 10
+  },
+  {
+    "id": "longsword",
+    "name": "Longsword",
+    "cost_gp": 15
+  },
+  {
+    "id": "maul",
+    "name": "Maul",
+    "cost_gp": 10
+  },
+  {
+    "id": "morningstar",
+    "name": "Morningstar",
+    "cost_gp": 15
+  },
+  {
+    "id": "pike",
+    "name": "Pike",
+    "cost_gp": 5
+  },
+  {
+    "id": "rapier",
+    "name": "Rapier",
+    "cost_gp": 25
+  },
+  {
+    "id": "scimitar",
+    "name": "Scimitar",
+    "cost_gp": 25
+  },
+  {
+    "id": "shortsword",
+    "name": "Shortsword",
+    "cost_gp": 10
+  },
+  {
+    "id": "trident",
+    "name": "Trident",
+    "cost_gp": 5
+  },
+  {
+    "id": "war-pick",
+    "name": "War pick",
+    "cost_gp": 5
+  },
+  {
+    "id": "warhammer",
+    "name": "Warhammer",
+    "cost_gp": 15
+  },
+  {
+    "id": "whip",
+    "name": "Whip",
+    "cost_gp": 2
+  },
+  {
+    "id": "blowgun",
+    "name": "Blowgun",
+    "cost_gp": 10
+  },
+  {
+    "id": "hand-crossbow",
+    "name": "Hand crossbow",
+    "cost_gp": 75
+  },
+  {
+    "id": "heavy-crossbow",
+    "name": "Heavy crossbow",
+    "cost_gp": 50
+  },
+  {
+    "id": "longbow",
+    "name": "Longbow",
+    "cost_gp": 50
+  },
+  {
+    "id": "net",
+    "name": "Net",
+    "cost_gp": 1
+  }
+]

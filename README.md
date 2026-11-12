@@ -54,6 +54,35 @@ fastapi dev app/main.py        # API on http://localhost:8000, docs at /docs
 
 Run `alembic upgrade head` again after pulling changes that add migrations; the API doesn't create tables on startup. The database is `api/dnd.db` by default. Set the `DATABASE_URL` environment variable to use a different one.
 
+### Example data
+To load the SRD 5.1 weapons and armor (name and cost), a party account (`party-foundry`), a player in that party (`player-demo`) and two shops with some stock, run from `api/` after `alembic upgrade head`:
+
+```bash
+python seed.py
+```
+
+It's safe to run more than once: existing rows are updated, not duplicated. The data lives in `api/seed_data/*.json`, so you can replace it without touching the script.
+
+### Tests
+From `api/`, with the venv active:
+
+```bash
+pytest
+```
+
+The tests use a fresh in-memory SQLite database each time, so they never touch `dnd.db`.
+
+### Endpoints
+Interactive docs are at http://localhost:8000/docs while the API runs.
+
+- `GET /health`: returns `{"status": "ok"}`.
+- `GET /accounts/{account_id}/shops`: the shops an account can see, either through its own access or through a party it belongs to. 404 if the account doesn't exist.
+- `GET /accounts/{account_id}/shops/{shop_id}/inventory`: the shop's stock as that account sees it, with each item's type, id, name, description, quantity, `in_stock` and `price_gp`. 404 if the account or shop doesn't exist, 403 if the account can't see the shop.
+
+Prices are item cost × shop modifier × inventory modifier × the account's access modifier (the lowest of its own and its parties' modifiers for that shop), rounded half-up to 2 decimals at the end. The rules live in `api/app/shop_service.py`.
+
+With the example data, try `/accounts/player-demo/shops` (both shops) and `/accounts/party-foundry/shops/back-room-armory/inventory` (403).
+
 ## How to run the web app
 You need Node.js 22.22+ or 24.15+ (check with `node -v`).
 

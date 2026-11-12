@@ -1,0 +1,40 @@
+{
+  "accounts": [
+    { "id": "party-foundry", "type": "party", "display_name": "The Foundry Party" },
+    { "id": "player-demo", "type": "player", "display_name": "Demo Player" }
+  ],
+  "party_players": [
+    { "party_id": "party-foundry", "player_id": "player-demo" }
+  ],
+  "shops": [
+    {
+      "id": "blacksmith-town",
+      "name": "Town Blacksmith",
+      "description": "Honest steel at honest prices.",
+      "cost_modifier": 1.0
+    },
+    {
+      "id": "back-room-armory",
+      "name": "Back-Room Armory",
+      "description": "Finer goods, shown only to trusted customers.",
+      "cost_modifier": 1.1
+    }
+  ],
+  "shop_access": [
+    { "shop_id": "blacksmith-town", "account_id": "party-foundry", "cost_modifier": 1.0 },
+    { "shop_id": "back-room-armory", "account_id": "player-demo", "cost_modifier": 0.8 }
+  ],
+  "shop_inventory": [
+    { "shop_id": "blacksmith-town", "weapon_id": "longsword", "quantity": 3 },
+    { "shop_id": "blacksmith-town", "weapon_id": "shortsword", "quantity": 5 },
+    { "shop_id": "blacksmith-town", "weapon_id": "dagger", "quantity": 12 },
+    { "shop_id": "blacksmith-town", "weapon_id": "handaxe", "quantity": 4, "cost_modifier": 0.9 },
+    { "shop_id": "blacksmith-town", "armor_id": "chain-mail", "quantity": 1 },
+    { "shop_id": "blacksmith-town", "armor_id": "shield", "quantity": 2 },
+    { "shop_id": "blacksmith-town", "armor_id": "plate", "quantity": 0 },
+    { "shop_id": "back-room-armory", "weapon_id": "rapier", "quantity": 2, "cost_modifier": 1.2 },
+    { "shop_id": "back-room-armory", "weapon_id": "hand-crossbow", "quantity": 1 },
+    { "shop_id": "back-room-armory", "armor_id": "studded-leather", "quantity": 1 },
+    { "shop_id": "back-room-armory", "armor_id": "half-plate", "quantity": 1 }
+  ]
+}
