@@ -5,32 +5,34 @@ Player-side companion for our D&D 5e campaigns: a shop/item tracker built around
 ## Why
 Over several months I've developed an extensive set of house rules, including more specific rules for items and equipment, alongside a lot of campaign lore. That material currently lives in scattered notes, documents and chat. This app brings it together in one place, so the party can see what they can buy and record what they've learned.
 
-## Planned features
+## Roadmap
 
-### Shops & items (first milestone)
-- [ ] Item catalogue: SRD items plus homebrew, with house-rule properties and pricing
-- [ ] Shops per town with shopkeeper (linked NPC), stock and prices
-- [ ] Party gold and purchase log
+### 1. House-rule items, shops and basic login (in progress)
+- [x] Data model: accounts (admin, party, player), parties, shops, shop access, and item tables for weapons, armor, adventuring items and masterwork weapons and armor
+- [x] Pricing: item cost × shop modifier × inventory modifier × the account's access modifier, with per-player rates within a party
+- [x] API: the shops an account can see, and each shop's stock with computed prices
+- [x] Example data: SRD 5.1 weapons and armor, plus example shops
+- [x] Web: username login that remembers accounts on the device
+- [ ] Web: browse the shops your account can access, and their stock and prices
+- [ ] House-rule item properties beyond name, description and cost
+- [ ] Mobile-friendly layout for use at the table
 
-### Lore wiki
-- [ ] NPCs, places, factions, deities and history pages with links between them
-- [ ] Tags and full-text search
-- [ ] "What the party knows" — rumours vs confirmed facts, updated as we learn more
-- [ ] Campaign timeline and session notes that feed into lore
+### 2. Masterwork items
+- [ ] Modifications that turn a base weapon or armor into a masterwork item
+- [ ] Create masterwork items in the app
+- [ ] Import items in bulk
 
-### Maps
-- [ ] Upload maps and pin locations linked to lore pages
+### 3. Lore wiki and handouts
+- [ ] Present handouts and lore to the party
+- [ ] NPCs, places, factions and history pages with links between them
+- [ ] Control what the party has discovered, and when
 
-### House rules
-- [ ] Searchable house-rule reference per campaign
-
-### Foundry VTT integration
-- [ ] Sync shops, items and lore with our Foundry VTT campaign
-
-### Platform
-- [ ] Multiple campaigns, player accounts and permissions
-- [ ] Mobile-friendly for use at the table
-- [ ] Markdown import/export
+### Later
+- [ ] Foundry VTT integration: sync shops, items and lore with the online campaign
+- [ ] Discord integration (to be decided)
+- [ ] Maps with pinned locations linked to lore
+- [ ] Searchable house-rule reference
+- [ ] Campaigns and settings, with real player accounts and permissions
 
 ## Tech stack
 - **Backend:** FastAPI (Python)
